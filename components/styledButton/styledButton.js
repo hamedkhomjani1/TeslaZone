@@ -5,7 +5,11 @@ import styles from './styledButtonStyles';
 
 const StyledButton = (props) => {
 
-    const type = props.type;
+    // const type = props.type;
+    // const content = props.content;
+    // const onPress = props.onPress;
+    
+    const { type, content, onPress } = props;
 
     const backgroundColor = type === 'primary' ? '#171A20CC' : '#ffffffA6';
     const textColor = type === 'primary' ? '#ffffffA6' : '#171A20CC';
@@ -14,11 +18,9 @@ const StyledButton = (props) => {
         <View style={styles.container}>
             <Pressable
                 style={[styles.button, { backgroundColor: backgroundColor }]}
-                onPress={() => {
-                    console.warn('Hey There!')
-                }}
+                onPress={() => onPress()}
             >
-                <Text style={[styles.buttonText, { color: textColor }]}>Custom Order</Text>
+                <Text style={[styles.buttonText, { color: textColor }]}>{content}</Text>
             </Pressable>
         </View >
     )
