@@ -3,11 +3,14 @@ import React from 'react';
 import {StyleSheet, View } from 'react-native';
 import CarItem from './components/CarItem/carItem';
 import CarList from './components/CarsList/carList';
+import Header from './components/Header/header';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
+
+      <Header />
 
       <CarList />
 
